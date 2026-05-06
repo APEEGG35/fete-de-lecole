@@ -1,0 +1,10 @@
+.DS_Store
+.omc/
+*.swp
+*.bak
+node_modules/
+
+# Sources de référence (gardées en local mais non versionnées)
+FETE DES ECOLES GUY GERARD 2026.png
+LOGO APEEGG.jpg
+data/lots.json

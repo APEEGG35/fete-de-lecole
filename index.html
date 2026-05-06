@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tombola de la Fête des Écoles · Guy Gérard · 26 juin 2026</title>
+  <meta name="description" content="Tombola de la Fête des Écoles Guy Gérard à Pacé — 26 juin 2026. 115 lots à gagner, ticket à 1€. Tirage à 18h dans la cour de l'école élémentaire.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__logos">
+        <img src="assets/logos/apeegg.jpg" alt="APEEGG — Association des Parents d'Élèves de l'École Guy Gérard" class="topbar__logo">
+        <span class="topbar__school">
+          <span class="topbar__school-eyebrow">École élémentaire</span>
+          <span class="topbar__school-name">Guy&nbsp;Gérard</span>
+          <span class="topbar__school-city">Pacé · 35740</span>
+        </span>
+      </div>
+      <nav class="topbar__nav" aria-label="Navigation principale">
+        <a href="#programme">Programme</a>
+        <a href="#stands">Stands</a>
+        <a href="#lots">Lots</a>
+        <a href="#acheter">Tickets</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#winners">Gagnants</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__corner hero__corner--tr">Édition 2026</div>
+
+      <p class="hero__eyebrow">L'Association des Parents d'Élèves de l'École Guy Gérard présente</p>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">La&nbsp;Grande</span>
+        <span class="hero__title-line hero__title-line--accent"><em>Tombola</em></span>
+        <span class="hero__title-line">de la fête des écoles</span>
+      </h1>
+
+      <div class="hero__meta">
+        <div class="hero__meta-block">
+          <span class="hero__meta-label">Date</span>
+          <span class="hero__meta-value"><strong>26</strong>&nbsp;juin&nbsp;<strong>2026</strong></span>
+        </div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-block">
+          <span class="hero__meta-label">Tirage</span>
+          <span class="hero__meta-value"><strong>18h00</strong></span>
+        </div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-block">
+          <span class="hero__meta-label">Lieu</span>
+          <span class="hero__meta-value">Cour de l'école&nbsp;élémentaire</span>
+        </div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-block">
+          <span class="hero__meta-label">Ticket</span>
+          <span class="hero__meta-value"><strong>1&nbsp;€</strong></span>
+        </div>
+      </div>
+
+      <div class="hero__amount">
+        <span class="hero__amount-label">Cagnotte de lots</span>
+        <span class="hero__amount-value" id="totalValue">3&nbsp;795&nbsp;€</span>
+        <span class="hero__amount-sub"><span id="totalLots">115</span> lots à gagner</span>
+      </div>
+
+      <a href="#lots" class="hero__cta">
+        <span>Découvrir les lots</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="hero__address">
+        École élémentaire Guy&nbsp;Gérard · Pacé&nbsp;(35740)
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMME ============ -->
+    <section class="programme" id="programme">
+      <div class="section-head">
+        <span class="section-head__num">I.</span>
+        <h2 class="section-head__title">Le <em>programme</em> de la fête</h2>
+        <p class="section-head__sub">Une journée festive dans la cour de l'école pour les enfants, les familles et les amis de Guy&nbsp;Gérard.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__time">dès<br><strong>16h30</strong></span>
+          <div class="timeline__body">
+            <h3>Ouverture des stands &amp; animations</h3>
+            <p>Les <a href="#stands">17 stands</a> ouvrent dans la cour de l'école. Jeux, défis, créations et goûters préparés par les bénévoles de l'APEEGG.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--accent">
+          <span class="timeline__time"><strong>18h00</strong></span>
+          <div class="timeline__body">
+            <h3>Tirage au sort de la tombola</h3>
+            <p>Sous le préau, devant tous les participants. Les numéros gagnants seront annoncés en direct, puis publiés sur ce site.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__time">en<br>soirée</span>
+          <div class="timeline__body">
+            <h3>Repas adultes &amp; enfants</h3>
+            <p>Restauration sur place préparée par les bénévoles. Stand boissons, gâteaux maison et crêpes pour clôturer la journée en famille et entre amis.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ STANDS ============ -->
+    <section class="stands" id="stands">
+      <div class="section-head">
+        <span class="section-head__num">II.</span>
+        <h2 class="section-head__title">Les <em>17 stands</em> de la fête</h2>
+        <p class="section-head__sub">Une cour transformée en village d'animations, géré par les enfants, les enseignants et les parents bénévoles. Chaque stand a son numéro — repère ceux que tu veux faire en arrivant.</p>
+      </div>
+
+      <ol class="stands-grid">
+        <li class="stand"><span class="stand__num">01</span><span class="stand__name">Maquillage</span></li>
+        <li class="stand"><span class="stand__num">02</span><span class="stand__name">Dessins à la craie</span></li>
+        <li class="stand"><span class="stand__num">03</span><span class="stand__name">Structure gonflable</span></li>
+        <li class="stand"><span class="stand__num">04</span><span class="stand__name">Pêche aux canards</span></li>
+        <li class="stand"><span class="stand__num">05</span><span class="stand__name">Mange balle</span></li>
+        <li class="stand"><span class="stand__num">06</span><span class="stand__name">Queue de l'âne</span></li>
+        <li class="stand"><span class="stand__num">07</span><span class="stand__name">Stand solidaire</span></li>
+        <li class="stand"><span class="stand__num">08</span><span class="stand__name">Toboboué</span></li>
+        <li class="stand"><span class="stand__num">09</span><span class="stand__name">Kho-Lanta</span></li>
+        <li class="stand"><span class="stand__num">10</span><span class="stand__name">Tir à la corde</span></li>
+        <li class="stand"><span class="stand__num">11</span><span class="stand__name">Enfant de café</span></li>
+        <li class="stand"><span class="stand__num">12</span><span class="stand__name">Chamboule tout</span></li>
+        <li class="stand"><span class="stand__num">13</span><span class="stand__name">Frappe méchant</span></li>
+        <li class="stand"><span class="stand__num">14</span><span class="stand__name">Puissance 4</span></li>
+        <li class="stand"><span class="stand__num">15</span><span class="stand__name">Bâtons Boyard</span></li>
+        <li class="stand"><span class="stand__num">16</span><span class="stand__name">Valise mystère</span></li>
+        <li class="stand"><span class="stand__num">17</span><span class="stand__name">Jeux des drapeaux</span></li>
+      </ol>
+    </section>
+
+    <!-- ============ LES LOTS ============ -->
+    <section class="lots" id="lots">
+      <div class="section-head">
+        <span class="section-head__num">III.</span>
+        <h2 class="section-head__title">Les <em>lots</em> à gagner</h2>
+        <p class="section-head__sub">115 lots offerts par l'APEEGG, les commerçants, artisans et amis de l'école — classés du plus prestigieux au plus délicat.</p>
+      </div>
+
+      <!-- Podium top 3 -->
+      <div class="podium" id="podium" aria-label="Top 3 des lots"></div>
+
+      <!-- Highlights 4-10 -->
+      <div class="highlights-head">
+        <span class="highlights-head__rule"></span>
+        <span class="highlights-head__label">Les coups de cœur · n°&nbsp;4 à 10</span>
+        <span class="highlights-head__rule"></span>
+      </div>
+      <div class="highlights" id="highlights"></div>
+
+      <!-- Reste de la liste -->
+      <div class="rest-head">
+        <h3>Tous les autres lots</h3>
+        <div class="rest-search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.4"/><path d="m11 11 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <input type="search" id="searchLots" placeholder="Rechercher un lot, un sponsor…" aria-label="Rechercher dans les lots">
+        </div>
+      </div>
+      <ul class="rest" id="restList"></ul>
+      <p class="rest__empty" id="restEmpty" hidden>Aucun lot ne correspond à ta recherche.</p>
+    </section>
+
+    <!-- ============ ACHETER ============ -->
+    <section class="acheter" id="acheter">
+      <div class="acheter__inner">
+        <div class="acheter__col">
+          <span class="acheter__eyebrow">IV. Comment participer&nbsp;?</span>
+          <h2 class="acheter__title">Le ticket à <em>1&nbsp;€</em></h2>
+          <p class="acheter__lead">Chaque ticket porte un numéro unique et participe au tirage du <strong>26&nbsp;juin&nbsp;2026 à 18h</strong>. La totalité des bénéfices finance les projets pédagogiques et les sorties scolaires des enfants de l'école.</p>
+          <p class="acheter__lead acheter__lead--mute">Les tickets sont distribués via les enseignant·es et les parents bénévoles dès l'ouverture de la campagne — la grande majorité a déjà été remise aux familles. Il n'y aura ni vente aux sorties d'école, ni vente le jour de la fête.</p>
+        </div>
+        <div class="acheter__col">
+          <ul class="acheter__list">
+            <li>
+              <span class="acheter__num">01</span>
+              <div>
+                <h3>Auprès des enseignants</h3>
+                <p>Demandez à votre enseignant·e ou à un parent délégué — des carnets sont disponibles tant que les tickets ne sont pas tous distribués.</p>
+              </div>
+            </li>
+            <li>
+              <span class="acheter__num">★</span>
+              <div>
+                <h3>Bonus meilleurs vendeurs</h3>
+                <p>Les meilleurs vendeurs et vendeuses de chaque classe seront récompensés par des <strong>lots surprises dédiés aux vendeurs</strong> — un grand merci aux enfants qui s'investissent&nbsp;!</p>
+              </div>
+            </li>
+            <li>
+              <span class="acheter__num">@</span>
+              <div>
+                <h3>Une question&nbsp;?</h3>
+                <p>Écrivez à <a href="mailto:assoparents.guygerard@gmail.com" class="acheter__mail">assoparents.guygerard@gmail.com</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT 2025 ============ -->
+    <section class="impact">
+      <div class="impact__inner">
+        <span class="impact__eyebrow">L'an dernier</span>
+        <p class="impact__line">
+          Grâce à la fête des écoles 2025, l'APEEGG a reversé
+          <span class="impact__amount">+&nbsp;5&nbsp;000&nbsp;€</span>
+          à l'école Guy&nbsp;Gérard pour financer projets pédagogiques, sorties et matériel scolaire.
+        </p>
+        <p class="impact__sub">Cette année, votre participation soutient à nouveau directement les enfants de l'école.</p>
+      </div>
+    </section>
+
+    <!-- ============ SPONSORS ============ -->
+    <section class="sponsors" id="sponsors">
+      <div class="section-head">
+        <span class="section-head__num">V.</span>
+        <h2 class="section-head__title">Nos <em>partenaires</em>&nbsp;&amp; donateurs</h2>
+        <p class="section-head__sub">Une tombola n'existe que par la générosité de ceux qui la rendent possible. Un immense merci à toutes les enseignes, artisans, commerçants et particuliers qui ont contribué cette année.</p>
+      </div>
+      <div class="sponsors__grid" id="sponsorsGrid"></div>
+    </section>
+
+    <!-- ============ MERCI ============ -->
+    <section class="thanks">
+      <div class="thanks__card">
+        <span class="thanks__eyebrow">VI. Remerciements</span>
+        <h2 class="thanks__title">À <em>vous</em>, qui faites la fête.</h2>
+        <p class="thanks__body">
+          Merci aux <strong>enseignant·es et au personnel de l'école Guy&nbsp;Gérard</strong> pour leur accueil et leur engagement quotidien.
+          Merci aux <strong>bénévoles de l'APEEGG</strong>, à celles et ceux qui montent les stands, démarchent les sponsors, préparent les repas, démontent jusqu'à tard dans la nuit et reviennent l'année suivante avec le même sourire.
+          Merci aux <strong>familles, parents, grands-parents et voisins</strong> qui achètent un ticket, deux, dix — et qui transforment une simple tombola en cagnotte au service des enfants.
+        </p>
+        <p class="thanks__sign">— L'équipe de l'APEEGG</p>
+      </div>
+    </section>
+
+    <!-- ============ GAGNANTS ============ -->
+    <section class="winners" id="winners">
+      <div class="winners__inner" id="winnersInner">
+        <span class="winners__eyebrow">VII. Tirage &amp; remise des lots</span>
+        <h2 class="winners__title">Les <em>numéros gagnants</em></h2>
+        <p class="winners__placeholder">
+          Le tirage aura lieu le <strong>26 juin 2026 à 18h</strong> dans la cour de l'école élémentaire Guy&nbsp;Gérard. La liste des numéros gagnants sera publiée ici en direct, et restera consultable les semaines suivantes.
+        </p>
+
+        <div class="recup">
+          <div class="recup__step">
+            <span class="recup__num">①</span>
+            <h3>Sur place, le 26&nbsp;juin</h3>
+            <p>Si tu es présent·e au tirage, ton lot peut t'être remis directement à la fin de l'annonce des numéros, sous le préau.</p>
+          </div>
+          <div class="recup__step">
+            <span class="recup__num">②</span>
+            <h3>Par téléphone, la semaine suivante</h3>
+            <p>Si tu n'as pas pu récupérer ton lot le jour de la fête, un membre de l'APEEGG te <strong>contactera par téléphone dans la semaine</strong> qui suit pour convenir d'un mode de récupération adapté.</p>
+          </div>
+          <div class="recup__step">
+            <span class="recup__num">③</span>
+            <h3>Une question&nbsp;?</h3>
+            <p>Pour toute question concernant la remise d'un lot&nbsp;:<br><a href="mailto:assoparents.guygerard@gmail.com" class="recup__mail">assoparents.guygerard@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RÈGLEMENT ============ -->
+    <section class="reglement" id="reglement">
+      <div class="section-head">
+        <span class="section-head__num">VIII.</span>
+        <h2 class="section-head__title">Règlement de la <em>tombola</em></h2>
+        <p class="section-head__sub">Document légal — édition 2026. Susceptible d'évoluer jusqu'à la date du tirage.</p>
+      </div>
+
+      <div class="reglement__doc">
+        <article class="reglement__article">
+          <h3>Article 1 — Organisation</h3>
+          <p>L'Association des Parents d'Élèves de l'École Guy Gérard (APEEGG), association loi 1901, organise une tombola gratuite sans obligation d'achat dans le cadre de la fête des écoles du <strong>26 juin 2026</strong>, dont le bénéfice est intégralement reversé au financement des projets pédagogiques et sorties scolaires des élèves de l'école.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 2 — Participation</h3>
+          <p>La tombola est ouverte à toute personne physique majeure ou mineure (avec accord parental implicite). La participation se fait par l'achat d'un ou plusieurs tickets au prix unitaire de <strong>1&nbsp;€</strong>. Chaque ticket porte un numéro unique et donne droit à un tirage.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 3 — Tirage au sort</h3>
+          <p>Le tirage au sort sera effectué publiquement le <strong>26 juin 2026 à partir de 18h00</strong> dans la cour de l'école élémentaire Guy Gérard, en présence des participants et des membres de l'APEEGG. Les numéros gagnants seront annoncés en direct puis publiés sur ce site.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 4 — Attribution des lots</h3>
+          <p>Chaque lot est attribué à un seul ticket gagnant, dans l'ordre du tirage. Les lots ne sont ni échangeables, ni remboursables, ni convertibles en numéraire. La valeur indiquée pour chaque lot est donnée à titre indicatif.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 5 — Remise des lots</h3>
+          <p>Les lots peuvent être remis sur place le jour du tirage, ou ultérieurement par contact avec l'APEEGG. Les gagnants disposent d'un délai d'un (1) mois à compter du tirage pour réclamer leur lot. Passé ce délai, le lot non réclamé sera considéré comme abandonné et pourra être remis en jeu lors d'une édition ultérieure.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 6 — Données personnelles</h3>
+          <p>Les coordonnées éventuellement collectées auprès des gagnants (nom, prénom, téléphone) sont utilisées uniquement à des fins de remise de lot et ne sont ni conservées au-delà du nécessaire, ni transmises à des tiers, conformément au RGPD.</p>
+        </article>
+        <article class="reglement__article">
+          <h3>Article 7 — Acceptation du règlement</h3>
+          <p>La participation à la tombola implique l'acceptation pleine et entière du présent règlement. L'APEEGG se réserve le droit de modifier ou compléter ce règlement jusqu'à la date du tirage. La version en vigueur est celle publiée sur ce site.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">APE<span>EGG</span></span>
+        <p>Association des Parents d'Élèves<br>de l'École Guy Gérard · Pacé</p>
+      </div>
+      <div class="footer__col">
+        <h4>L'événement</h4>
+        <p>Fête des écoles<br>26 juin 2026 · 18h<br>Cour de l'école élémentaire</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liens</h4>
+        <a href="#programme">Programme</a>
+        <a href="#stands">Stands</a>
+        <a href="#lots">Lots</a>
+        <a href="#acheter">Tickets</a>
+        <a href="#winners">Gagnants</a>
+        <a href="#reglement">Règlement</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Pour toute question concernant la tombola, la vente de tickets ou la remise d'un lot&nbsp;:</p>
+        <a href="mailto:assoparents.guygerard@gmail.com" class="footer__mail">assoparents.guygerard@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 APEEGG — École Guy Gérard, Pacé</span>
+      <span>Site réalisé bénévolement pour la fête des écoles.</span>
+    </div>
+  </footer>
+
+  <script src="data/lots.js"></script>
+  <script src="data/winners.js"></script>
+  <script src="data/sponsors.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
