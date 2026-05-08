@@ -29,6 +29,34 @@
 
   const winnerFor = (num) => winners.find((w) => w.num === num);
 
+  // Ajoute des cellules vides en fin de grille pour combler la dernière ligne.
+  // Recalcule à chaque appel : à utiliser après rendu et sur resize.
+  const fillGrid = (container, fillerClass) => {
+    if (!container) return;
+    container.querySelectorAll('.' + fillerClass).forEach((el) => el.remove());
+    const items = Array.from(container.children);
+    if (!items.length) return;
+    const firstTop = items[0].getBoundingClientRect().top;
+    let cols = 0;
+    for (const it of items) {
+      if (Math.abs(it.getBoundingClientRect().top - firstTop) < 1) cols += 1;
+      else break;
+    }
+    if (cols < 2) return;
+    const remainder = items.length % cols;
+    if (remainder === 0) return;
+    const need = cols - remainder;
+    const tag = items[0].tagName.toLowerCase();
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < need; i += 1) {
+      const filler = document.createElement(tag);
+      filler.className = fillerClass;
+      filler.setAttribute('aria-hidden', 'true');
+      frag.appendChild(filler);
+    }
+    container.appendChild(frag);
+  };
+
   // ---------- Hero totaux ----------
   const totalValue = lots.reduce((acc, l) => acc + (l.value || 0), 0);
   const totalEl = document.getElementById('totalValue');
@@ -53,6 +81,7 @@
           ${crown}
           <span class="podium__rank">№${lot.rank}</span>
           <h3 class="podium__title">${escape(lot.title)}</h3>
+          ${lot.description ? `<p class="podium__description">${escape(lot.description)}</p>` : ''}
           ${lot.sponsor ? `<p class="podium__sponsor">Offert par <strong>${escape(cleanSponsor(lot.sponsor))}</strong></p>` : ''}
           <div class="podium__value">
             <span class="podium__value-label">Valeur</span>
@@ -78,10 +107,12 @@
             <span class="highlight__value">${fmtEuro(lot.value)}</span>
           </div>
           <h3 class="highlight__title">${escape(lot.title)}</h3>
+          ${lot.description ? `<p class="highlight__description">${escape(lot.description)}</p>` : ''}
           ${lot.sponsor ? `<p class="highlight__sponsor">Offert par ${escape(cleanSponsor(lot.sponsor))}</p>` : ''}
         </article>
       `;
     }).join('');
+    fillGrid(highlightsEl, 'highlight--filler');
   }
 
   // ---------- Reste de la liste + recherche ----------
@@ -114,6 +145,7 @@
           <span class="rest__num">№${lot.rank}</span>
           <div class="rest__body">
             <h4 class="rest__title">${escape(lot.title)}</h4>
+            ${lot.description ? `<p class="rest__description">${escape(lot.description)}</p>` : ''}
             ${lot.sponsor ? `<p class="rest__sponsor">${escape(cleanSponsor(lot.sponsor))}</p>` : ''}
           </div>
           <span class="rest__value">${fmtEuro(lot.value)}</span>
@@ -121,6 +153,7 @@
         </li>
       `;
     }).join('');
+    fillGrid(restEl, 'rest__item--filler');
   };
 
   renderRest('');
@@ -171,7 +204,24 @@
         </div>
       `;
     }).join('');
+    fillGrid(sponsorsEl, 'sponsor--filler');
   }
+
+  // ---------- Stands : on remplit aussi la dernière ligne ----------
+  const standsGrid = document.querySelector('.stands-grid');
+  fillGrid(standsGrid, 'stand--filler');
+
+  // Recalcule les fillers quand le viewport change.
+  let resizeRaf = null;
+  window.addEventListener('resize', () => {
+    if (resizeRaf) cancelAnimationFrame(resizeRaf);
+    resizeRaf = requestAnimationFrame(() => {
+      fillGrid(standsGrid, 'stand--filler');
+      fillGrid(highlightsEl, 'highlight--filler');
+      fillGrid(restEl, 'rest__item--filler');
+      fillGrid(sponsorsEl, 'sponsor--filler');
+    });
+  });
 
   // ---------- Winners section ----------
   const winnersInner = document.getElementById('winnersInner');
