@@ -174,11 +174,16 @@ def main() -> None:
     rows.sort(key=lambda r: r[0])
 
     lots: list[dict] = []
-    for rank, (num, cell, value_cell) in enumerate(rows, start=1):
+    for num, cell, value_cell in rows:
         lot = parse_cell(num, cell, value_cell)
         lot["category"] = infer_category(lot)
-        lot["rank"] = rank
         lots.append(lot)
+
+    # Classement par valeur décroissante (lots sans valeur en dernier).
+    # Le n° de lot départage les ex æquo pour un ordre stable et reproductible.
+    lots.sort(key=lambda l: (-(l["value"] or 0), l["num"]))
+    for rank, lot in enumerate(lots, start=1):
+        lot["rank"] = rank
 
     body = json.dumps(lots, ensure_ascii=False, indent=2)
     js = (

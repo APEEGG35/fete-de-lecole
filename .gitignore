@@ -8,3 +8,7 @@ node_modules/
 FETE DES ECOLES GUY GERARD 2026.png
 LOGO APEEGG.jpg
 data/lots.json
+
+# CSV source de la tombola : contient des données perso (contacts, gagnants).
+# Ne jamais versionner — seul data/lots.js (généré, anonyme) est publié.
+*.csv

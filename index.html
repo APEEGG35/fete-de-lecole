@@ -52,11 +52,16 @@
       <div class="hero__meta">
         <div class="hero__meta-block">
           <span class="hero__meta-label">Date</span>
-          <span class="hero__meta-value"><strong>26</strong>&nbsp;juin&nbsp;<strong>2026</strong></span>
+          <span class="hero__meta-value"><strong>26</strong>&nbsp;juin&nbsp;<strong>2026</strong> · dès&nbsp;<strong>17h</strong></span>
         </div>
         <div class="hero__meta-divider"></div>
         <div class="hero__meta-block">
-          <span class="hero__meta-label">Tirage</span>
+          <span class="hero__meta-label">Spectacle</span>
+          <span class="hero__meta-value"><strong>17h</strong>&nbsp;–&nbsp;<strong>17h30</strong></span>
+        </div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-block">
+          <span class="hero__meta-label">Tirage de la tombola</span>
           <span class="hero__meta-value"><strong>18h00</strong></span>
         </div>
         <div class="hero__meta-divider"></div>
@@ -97,10 +102,10 @@
 
       <ol class="timeline">
         <li class="timeline__item">
-          <span class="timeline__time">dès<br><strong>16h30</strong></span>
+          <span class="timeline__time">dès<br><strong>17h</strong></span>
           <div class="timeline__body">
             <h3>Ouverture des stands &amp; animations</h3>
-            <p>Les <a href="#stands">17 stands</a> ouvrent dans la cour de l'école. Jeux, défis, créations et goûters préparés par les bénévoles de l'APEEGG.</p>
+            <p>Les <a href="#stands">18 stands</a> ouvrent dans la cour de l'école. Jeux, défis, créations et goûters préparés par les bénévoles de l'APEEGG.</p>
           </div>
         </li>
         <li class="timeline__item timeline__item--accent">
@@ -131,7 +136,7 @@
       <ol class="stands-grid">
         <li class="stand"><span class="stand__num">01</span><span class="stand__name">Maquillage</span></li>
         <li class="stand"><span class="stand__num">02</span><span class="stand__name">Dessins à la craie</span></li>
-        <li class="stand"><span class="stand__num">03</span><span class="stand__name">Structure gonflable</span></li>
+        <li class="stand"><span class="stand__num">03</span><span class="stand__name">Structures gonflables</span></li>
         <li class="stand"><span class="stand__num">04</span><span class="stand__name">Pêche aux canards</span></li>
         <li class="stand"><span class="stand__num">05</span><span class="stand__name">Mange balle</span></li>
         <li class="stand"><span class="stand__num">06</span><span class="stand__name">Queue de l'âne</span></li>
@@ -141,9 +146,9 @@
         <li class="stand"><span class="stand__num">10</span><span class="stand__name">Tir à la corde</span></li>
         <li class="stand"><span class="stand__num">11</span><span class="stand__name">Enfant de café</span></li>
         <li class="stand"><span class="stand__num">12</span><span class="stand__name">Chamboule tout</span></li>
-        <li class="stand"><span class="stand__num">13</span><span class="stand__name">Frappe méchant</span></li>
+        <li class="stand"><span class="stand__num">13</span><span class="stand__name">Billard japonais</span></li>
         <li class="stand"><span class="stand__num">14</span><span class="stand__name">Puissance 4</span></li>
-        <li class="stand"><span class="stand__num">15</span><span class="stand__name">Bâtons Boyard</span></li>
+        <li class="stand"><span class="stand__num">15</span><span class="stand__name">Les anneaux</span></li>
         <li class="stand"><span class="stand__num">16</span><span class="stand__name">Valise mystère</span></li>
         <li class="stand"><span class="stand__num">17</span><span class="stand__name">Jeux des drapeaux</span></li>
       </ol>
@@ -248,6 +253,7 @@
         <h2 class="thanks__title">À <em>vous</em>, qui faites la fête.</h2>
         <p class="thanks__body">
           Merci aux <strong>enseignant·es et au personnel de l'école Guy&nbsp;Gérard</strong> pour leur accueil et leur engagement quotidien.
+          Merci à la <strong>mairie de Pacé</strong> pour son soutien, le prêt du matériel et la mise à disposition des lieux qui rendent cette fête possible.
           Merci aux <strong>bénévoles de l'APEEGG</strong>, à celles et ceux qui montent et tiennent les stands, démarchent les sponsors, préparent les repas, démontent jusqu'à tard dans la nuit et reviennent l'année suivante avec le même sourire.
           Merci aux <strong>familles, parents, grands-parents et voisins</strong> qui achètent un ticket, deux, dix — et qui transforment une simple tombola en cagnotte au service des enfants.
         </p>
@@ -301,25 +307,25 @@
           <h3>Article 2 – Participants et conditions de participation</h3>
           <p>La tombola est ouverte à toutes personnes physiques majeures résident en France Métropolitaine.</p>
           <p>Les organisateurs de la tombola de la fête de l'école du 26 juin 2026, membres du bureau de l'APEEGG, ne peuvent participer à cette tombola en leur propre nom.</p>
-          <p>400 carnets de 10 tickets numérotés seront mis en vente au prix de 10€ (1€ par ticket).</p>
+          <p>520 carnets de 10 tickets numérotés seront mis en vente au prix de 10€ (1€ par ticket).</p>
           <p>L'élimination immédiate du participant aura lieu si une tricherie est avérée.</p>
           <p>Tombola des vendeurs : Un vendeur par classe sera tiré au sort, soit 14 vendeurs qui seront récompensés par un lot.</p>
         </article>
         <article class="reglement__article">
           <h3>Article 3 – Dotation</h3>
-          <p>La tombola est dotée de 80 lots (sous réserve de modification), d'une valeur globale de 2 300 €. (des lots sont susceptibles d'être ajoutés jusqu'à la date du tirage.)</p>
+          <p>La tombola est dotée de <strong id="reglementLots">—</strong> lots (sous réserve de modification), d'une valeur globale de <strong id="reglementValue">—</strong>. (des lots sont susceptibles d'être ajoutés jusqu'à la date du tirage.)</p>
           <p>La liste exhaustive des lots et leur classement par ordre de valeur sera publiée sur le site dédié à la Tombola au plus tard le jeudi 25 juin 2026 à 20h : <a href="https://fete-des-ecoles-guygerard-pace.my.canva.site/" target="_blank" rel="noopener">https://fete-des-ecoles-guygerard-pace.my.canva.site/</a></p>
           <p>Les lots non réclamés seront soit remis en jeu par l'organisateur soit annulés.</p>
         </article>
         <article class="reglement__article">
           <h3>Article 4 – Tirage au sort</h3>
-          <p>Le tirage au sort aura lieu le vendredi 26 juin 2026 à partir de 18h lors de la fête de l'école Guy Gérard de Pacé en présence de la présidente de l'APEEGG, madame Mylène Alvarez et de plusieurs témoins pour attester de sa conformité et de son bon déroulement. Un enfant pris au hasard dans l'assistance piochera les bulletins gagnants. Le tirage se déroulera par ordre croissant de valeur. Le tirage des lots supérieurs à 50€ seront annoncés au micro.</p>
+          <p>Le tirage au sort aura lieu le vendredi 26 juin 2026 lors de la fête de l'école Guy Gérard de Pacé en présence de la présidente de l'APEEGG, madame Mylène Alvarez et de plusieurs témoins pour attester de sa conformité et de son bon déroulement. Un enfant pris au hasard dans l'assistance piochera les bulletins gagnants. Le tirage se déroulera par ordre croissant de valeur. Les 15 premiers lots seront annoncés au micro à 18h.</p>
           <p>Si le bon de participation est illisible, ou mal complété, celui-ci sera considéré comme nul, et un nouveau tirage sera réalisé pour déterminer le gagnant du lot.</p>
           <p>S'il y a l'existence d'une tricherie avérée, le bulletin de la personne concernée sera retiré et considéré comme nul.</p>
         </article>
         <article class="reglement__article">
           <h3>Article 5 – Retrait des lots</h3>
-          <p>Les lots sont à retirer, après le tirage au sort, sur place le vendredi 26 juin 2026 à la buvette de la fête de l'école Guy Gérard de Pacé jusqu'à 21h.</p>
+          <p>Les lots sont à retirer, après le tirage au sort, sur place le vendredi 26 juin 2026 au stand billeterie de la fête de l'école Guy Gérard de Pacé jusqu'à 21h.</p>
           <p>Après le vendredi 26 juin 2026, les lots pourront être retirés en prenant rendez-vous avec un membre de l'APEEGG par mail (<a href="mailto:assoparents.guygerard@gmail.com">assoparents.guygerard@gmail.com</a>).</p>
           <p>La date limite de retrait des lots est fixée au 30 septembre 2026 à 18h.</p>
           <p>Les personnes souhaitant récupérer leur lot, qui ne se seront pas manifesté avant cette date se verront déchues de leur droit, et perdront la propriété du bien. L'association remettra en jeu les lots non réclamés lors de prochaines opérations.</p>
@@ -337,8 +343,8 @@
         </article>
         <article class="reglement__article">
           <h3>Article 8 – Dépôt et consultation du règlement</h3>
-          <p>Ce règlement est consultable sur le site dédié : <a href="https://fete-des-ecoles-guygerard-pace.my.canva.site/" target="_blank" rel="noopener">https://fete-des-ecoles-guygerard-pace.my.canva.site/</a></p>
-          <p>Ce règlement peut également être adressé, à titre gratuit, à toute personne qui en fait la demande, auprès de <a href="mailto:assoparents.guygerard@gmail.com">assoparents.guygerard@gmail.com</a>.</p>
+          <p>Ce règlement est consultable directement sur ce site internet dédié à la tombola de la fête des écoles Guy Gérard.</p>
+          <p>Il peut également être adressé, à titre gratuit, à toute personne qui en fait la demande, auprès de <a href="mailto:assoparents.guygerard@gmail.com">assoparents.guygerard@gmail.com</a>.</p>
         </article>
         <article class="reglement__article">
           <h3>Article 9 – Informations personnelles</h3>
@@ -358,7 +364,7 @@
       </div>
       <div class="footer__col">
         <h4>L'événement</h4>
-        <p>Fête des écoles<br>26 juin 2026 · 16h30
+        <p>Fête des écoles<br>26 juin 2026 · 17h
           <br>Cour de l'école élémentaire</p>
       </div>
       <div class="footer__col">

@@ -64,6 +64,12 @@
   if (totalEl) totalEl.textContent = fmtEuro(totalValue);
   if (countEl) countEl.textContent = lots.length;
 
+  // Article 3 du règlement : dotation dynamique (nombre de lots + valeur globale)
+  const reglementLotsEl = document.getElementById('reglementLots');
+  const reglementValueEl = document.getElementById('reglementValue');
+  if (reglementLotsEl) reglementLotsEl.textContent = lots.length;
+  if (reglementValueEl) reglementValueEl.textContent = fmtEuro(totalValue);
+
   // ---------- Podium top 3 ----------
   const podiumEl = document.getElementById('podium');
   if (podiumEl) {
