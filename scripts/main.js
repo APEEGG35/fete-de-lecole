@@ -189,7 +189,6 @@
         })();
 
     sponsorsEl.innerHTML = sponsors.map((sp) => {
-      const lots_label = sp.count > 1 ? 'lots offerts' : 'lot offert';
       if (sp.logo) {
         return `
           <figure class="sponsor sponsor--logo reveal">
@@ -198,7 +197,6 @@
             </div>
             <figcaption class="sponsor__caption">
               <span class="sponsor__name">${escape(sp.name)}</span>
-              <span class="sponsor__count"><strong>${sp.count}</strong> ${lots_label}</span>
             </figcaption>
           </figure>
         `;
@@ -206,7 +204,6 @@
       return `
         <div class="sponsor sponsor--text reveal">
           <span class="sponsor__name">${escape(sp.name)}</span>
-          <span class="sponsor__count"><strong>${sp.count}</strong> ${lots_label}</span>
         </div>
       `;
     }).join('');
