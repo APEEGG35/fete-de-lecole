@@ -89,8 +89,12 @@ window.SPONSORS = [
     "logo": "sponsors/paillettes marinette.png"
   },
   {
-    "name": "L'ostréiculteur Lomet de la baie de Cancale et la Rôtisserie du dimanche",
+    "name": "L'ostréiculteur Lomet de la baie de Cancale",
     "logo": "sponsors/ostréiculteur.png"
+  },
+  {
+    "name": "La Rôtisserie du dimanche",
+    "logo": "sponsors/rôtisserie.png"
   },
   {
     "name": "Florus",

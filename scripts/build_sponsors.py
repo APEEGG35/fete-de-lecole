@@ -74,8 +74,9 @@ SPONSOR_MAP: list[tuple[str, str, str | None]] = [
     ("R de fête", "R de fête", "sponsors/r de fete.png"),
     ("The Roof Rennes", "The Roof Rennes", "sponsors/The roof.png"),
     ("Les Paillettes de Marinette", "Les Paillettes de Marinette", "sponsors/paillettes marinette.png"),
-    ("ostréiculteur Lomet de la baie de Cancale et la Rôtisserie du dimanche",
-     "L'ostréiculteur Lomet de la baie de Cancale et la Rôtisserie du dimanche", "sponsors/ostréiculteur.png"),
+    ("L'ostréiculteur Lomet de la baie de Cancale",
+     "L'ostréiculteur Lomet de la baie de Cancale", "sponsors/ostréiculteur.png"),
+    ("La Rôtisserie du dimanche", "La Rôtisserie du dimanche", "sponsors/rôtisserie.png"),
     ("Son de Gaston", "Le Son de Gaston", "sponsors/son gaston.jpg"),
     ("Parc de Branféré", "Le Parc de Branféré", "sponsors/Parc de Branféré.png"),
     ("Mat l'Eau", "Mat l'Eau", "sponsors/Math l_eau.png"),
@@ -124,6 +125,10 @@ SPLIT: dict[str, list[str]] = {
     norm("Leclerc Culturel Saint Grégoire & Super U L'Hermitage"): [
         "Leclerc Culturel Saint Grégoire",
         "Super U l'Hermitage",
+    ],
+    norm("L'ostréiculteur Lomet de la baie de Cancale et la Rôtisserie du dimanche"): [
+        "L'ostréiculteur Lomet de la baie de Cancale",
+        "La Rôtisserie du dimanche",
     ],
 }
 
