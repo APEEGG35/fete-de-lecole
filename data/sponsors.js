@@ -5,6 +5,10 @@ window.SPONSORS = [
     "logo": "assets/logos/apeegg.jpg"
   },
   {
+    "name": "Douceur et Passion",
+    "logo": "sponsors/Douceur et passion.png"
+  },
+  {
     "name": "Carrefour Pacé",
     "logo": "sponsors/Carrefour.png"
   },
@@ -15,6 +19,10 @@ window.SPONSORS = [
   {
     "name": "The Roof Rennes",
     "logo": "sponsors/The roof.png"
+  },
+  {
+    "name": "Le Ponant",
+    "logo": "sponsors/le ponant.png"
   },
   {
     "name": "Le Son de Gaston",
@@ -53,6 +61,10 @@ window.SPONSORS = [
     "logo": "sponsors/récrée curés.jpg"
   },
   {
+    "name": "Merssy",
+    "logo": "sponsors/merssy.jpeg"
+  },
+  {
     "name": "Crossfit Valkyrie",
     "logo": "sponsors/Crossfil valkyrie.jpg"
   },
@@ -75,6 +87,10 @@ window.SPONSORS = [
   {
     "name": "Le volailler La Rotisserie Pacéenne",
     "logo": "sponsors/rotisserie paceenne.png"
+  },
+  {
+    "name": "Les Goulus",
+    "logo": "sponsors/Les goulus.jpeg"
   },
   {
     "name": "L'APE GG",
@@ -129,12 +145,20 @@ window.SPONSORS = [
     "logo": "sponsors/carbasson.png"
   },
   {
+    "name": "le primeur Gaec du pont d'Het",
+    "logo": null
+  },
+  {
     "name": "L'association Regards de Mômes",
     "logo": "sponsors/Pestaculaire.png"
   },
   {
+    "name": "Dara",
+    "logo": "sponsors/DAra.jpeg"
+  },
+  {
     "name": "Les Jardins de Brocéliande",
-    "logo": "sponsors/Jardins brocéliande.png"
+    "logo": "sponsors/Les jardins de brocéliande.jpeg"
   },
   {
     "name": "Planète Sauvage",
@@ -147,6 +171,10 @@ window.SPONSORS = [
   {
     "name": "Upper Avenue",
     "logo": "sponsors/Upper Avenue.png"
+  },
+  {
+    "name": "Mademoiselle Souris",
+    "logo": "sponsors/mlle souris.jpeg"
   },
   {
     "name": "Escape Your Family",
@@ -211,6 +239,10 @@ window.SPONSORS = [
   {
     "name": "Level 3",
     "logo": "sponsors/Level 3.png"
+  },
+  {
+    "name": "A Cantina",
+    "logo": "sponsors/A cantina.jpeg"
   },
   {
     "name": "Le Noue Café à Pacé",

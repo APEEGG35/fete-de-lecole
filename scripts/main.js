@@ -246,7 +246,7 @@
         `;
       }).join('');
     winnersInner.innerHTML = `
-      <span class="winners__eyebrow">VI. Tirage du 26 juin 2026</span>
+      <span class="winners__eyebrow">VII. Tirage du 30 juin 2026</span>
       <h2 class="winners__title">Les <em>numéros gagnants</em></h2>
       <p class="winners__placeholder">Bravo à tous les gagnants&nbsp;! Pour récupérer votre lot, contactez l'APEEGG dans le mois suivant le tirage.</p>
       <ul class="winners__list">${list}</ul>

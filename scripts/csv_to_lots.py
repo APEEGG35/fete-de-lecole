@@ -109,8 +109,17 @@ _OFFERT_PAR = re.compile(
     flags=re.IGNORECASE,
 )
 
+# Numéro de lot : un entier, éventuellement suffixé « bis » / « ter ».
+# Le suffixe permet d'insérer un lot (ex. « 1 bis ») sans renuméroter les
+# suivants. Le lot garde son libellé comme identifiant (num = "1 bis") tandis
+# qu'un « order » fractionnaire (1.5) gère le tri/ex æquo. La position finale
+# sur le site reste pilotée par la valeur (le podium affiche le rang par valeur).
+_LOT_NUM = re.compile(r"^(\d+)\s*(bis|ter)?$", flags=re.IGNORECASE)
 
-def parse_cell(num: int, raw: str, value_cell: str) -> dict:
+_SUFFIX_ORDER = {"": 0.0, "bis": 0.5, "ter": 0.66}
+
+
+def parse_cell(num, order: float, raw: str, value_cell: str) -> dict:
     """Extrait title / description / sponsor / value depuis la cellule multi-lignes."""
     lines = [squash(line) for line in (raw or "").splitlines() if squash(line)]
 
@@ -138,6 +147,7 @@ def parse_cell(num: int, raw: str, value_cell: str) -> dict:
 
     return {
         "num": num,
+        "order": order,
         "title": title,
         "description": description,
         "sponsor": sponsor,
@@ -157,31 +167,40 @@ def main() -> None:
     if not CSV_PATH.exists():
         raise SystemExit(f"CSV introuvable : {CSV_PATH}")
 
-    rows: list[tuple[int, str, str]] = []
+    rows: list[tuple[object, float, str, str]] = []
     with CSV_PATH.open(newline="", encoding="utf-8") as f:
         reader = csv.reader(f)
         for row in reader:
-            if not row or not row[0].strip().isdigit():
+            if not row:
                 continue
-            num = int(row[0].strip())
+            m = _LOT_NUM.match(row[0].strip())
+            if not m:
+                continue
+            base = int(m.group(1))
+            suffix = (m.group(2) or "").lower()
+            order = base + _SUFFIX_ORDER[suffix]
+            # Identifiant du lot : libellé tel quel pour les lots « bis » (ex.
+            # "1 bis"), entier sinon. C'est ce num qu'on reporte dans winners.js.
+            num = row[0].strip() if suffix else base
             cell = row[1] if len(row) > 1 else ""
             value_cell = row[2] if len(row) > 2 else ""
             # Lignes réservées (numéro présent mais cellule vide) : on saute.
             if not cell.strip() and not value_cell.strip():
                 continue
-            rows.append((num, cell, value_cell))
+            rows.append((num, order, cell, value_cell))
 
-    rows.sort(key=lambda r: r[0])
+    rows.sort(key=lambda r: r[1])
 
     lots: list[dict] = []
-    for num, cell, value_cell in rows:
-        lot = parse_cell(num, cell, value_cell)
+    for num, order, cell, value_cell in rows:
+        lot = parse_cell(num, order, cell, value_cell)
         lot["category"] = infer_category(lot)
         lots.append(lot)
 
     # Classement par valeur décroissante (lots sans valeur en dernier).
-    # Le n° de lot départage les ex æquo pour un ordre stable et reproductible.
-    lots.sort(key=lambda l: (-(l["value"] or 0), l["num"]))
+    # L'« order » du lot départage les ex æquo pour un ordre stable et
+    # reproductible (il accepte les suffixes « bis » contrairement au num).
+    lots.sort(key=lambda l: (-(l["value"] or 0), l["order"]))
     for rank, lot in enumerate(lots, start=1):
         lot["rank"] = rank
 
