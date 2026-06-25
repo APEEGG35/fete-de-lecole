@@ -45,7 +45,7 @@ window.SPONSORS = [
     "logo": "sponsors/Foret adrenaline.png"
   },
   {
-    "name": "Frank Provost (Grand Quartier)",
+    "name": "Franck Provost (Grand Quartier)",
     "logo": "sponsors/Frank provost.png"
   },
   {
@@ -57,7 +57,7 @@ window.SPONSORS = [
     "logo": "sponsors/lucie st lise.jpg"
   },
   {
-    "name": "La récrée des 3 Curés",
+    "name": "La Récré des 3 Curés",
     "logo": "sponsors/récrée curés.jpg"
   },
   {
@@ -85,7 +85,7 @@ window.SPONSORS = [
     "logo": "sponsors/la haie du val.png"
   },
   {
-    "name": "Le volailler La Rotisserie Pacéenne",
+    "name": "Le volailler La Rôtisserie Pacéenne",
     "logo": "sponsors/rotisserie paceenne.png"
   },
   {
@@ -145,7 +145,7 @@ window.SPONSORS = [
     "logo": "sponsors/carbasson.png"
   },
   {
-    "name": "le primeur Gaec du pont d'Het",
+    "name": "le primeur GAEC du pont d'Het",
     "logo": null
   },
   {
@@ -205,7 +205,7 @@ window.SPONSORS = [
     "logo": "sponsors/ferme bout monde.jpg"
   },
   {
-    "name": "Le Chaudrons Ambulant",
+    "name": "Le Chaudron Ambulant",
     "logo": "sponsors/chaudron ambulant.jpg"
   },
   {
