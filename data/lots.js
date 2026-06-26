@@ -344,7 +344,7 @@ window.LOTS = [
   {
     "num": 34,
     "order": 34.0,
-    "title": "Pochette des produits de la marque Too Fruit",
+    "title": "Pochette de produits de la marque Too Fruit",
     "description": "",
     "sponsor": "Douceur et Passion",
     "value": 40.0,
@@ -445,8 +445,8 @@ window.LOTS = [
     "num": 44,
     "order": 44.0,
     "title": "Enveloppe les \"Saveurs du marché\"",
-    "description": "1 poulet · 1 panier garni offert par Demay Breizh - valeur 10€ · 1 panier de pommes offert par Le Verger du Brachet - valeur 5€",
-    "sponsor": "le volailler La Haie du Val - valeur 20€ environ (prix au poids)",
+    "description": "1 poulet offert par le volailler - valeur 20€ · 1 panier garni offert par Demay Breizh - valeur 10€ · 1 panier de pommes offert par Le Verger du Brachet - valeur 5€",
+    "sponsor": "offert par le marché de Pacé",
     "value": 35.0,
     "category": "gastro",
     "rank": 45
@@ -475,8 +475,8 @@ window.LOTS = [
     "num": 47,
     "order": 47.0,
     "title": "Oxalys - Tomes 1, 2 et 3",
-    "description": "Tome 1 · Tomes 2 et 3 offerts et dédicacés par Dara",
-    "sponsor": "l'APE GG",
+    "description": "Tome 1 · Tomes 2 et 3 dédicacés par Dara",
+    "sponsor": "Dara et l'APEEGG",
     "value": 34.5,
     "category": "maison",
     "rank": 48
@@ -485,8 +485,8 @@ window.LOTS = [
     "num": 48,
     "order": 48.0,
     "title": "Enveloppe les \"Saveurs du marché\"",
-    "description": "1 jus de pommes artisanal · 1 panier garni d'une valeur offert par Demay Breizh - valeur 10€ · 1 bon d'achat offert par la Ferme du Verger - valeur 10€ · 1 bon d'achat offert Des Papilles en Ville - valeur 10€",
-    "sponsor": "Chloé de Gaïa - valeur 3,50€",
+    "description": "1 jus de pommes artisanal offert par Chloé de Gaïa - valeur 3,50€ · 1 panier garni d'une valeur offert par Demay Breizh - valeur 10€ · 1 bon d'achat offert par la Ferme du Verger - valeur 10€ · 1 bon d'achat offert Des Papilles en Ville - valeur 10€",
+    "sponsor": "offert par le marché de Pacé",
     "value": 33.5,
     "category": "gastro",
     "rank": 49
@@ -544,7 +544,7 @@ window.LOTS = [
   {
     "num": 54,
     "order": 54.0,
-    "title": "Bon d'achat chez le fleuriste Florus",
+    "title": "Bon d'achat chez le fleuriste",
     "description": "",
     "sponsor": "Florus",
     "value": 30.0,
@@ -564,7 +564,7 @@ window.LOTS = [
   {
     "num": 56,
     "order": 56.0,
-    "title": "Boucles d'oreilles foudre offerte par Demi-Sel",
+    "title": "Boucles d'oreilles \"Foudre\" offerte par Demi-Sel",
     "description": "",
     "sponsor": "",
     "value": 30.0,
@@ -585,8 +585,8 @@ window.LOTS = [
     "num": 58,
     "order": 58.0,
     "title": "Coupe de cheveux enfants",
-    "description": "Coupe de cheveux enfants offerte par l'Atelier des coiffeurs Pacé · Livres et goodies",
-    "sponsor": "Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "description": "Coupe de cheveux enfants offerte par l'Atelier des coiffeurs Pacé · Livres et goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "sponsor": "L'atelier des coiffeurs",
     "value": 29.0,
     "category": "beaute",
     "rank": 59
@@ -595,8 +595,8 @@ window.LOTS = [
     "num": 59,
     "order": 59.0,
     "title": "Coupe de cheveux enfants",
-    "description": "Coupe de cheveux enfants (3-10ans) offerte par le salon de coiffure Gautier Pacé · Livres et goodies",
-    "sponsor": "Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "description": "Coupe de cheveux enfants (3-10ans) offerte par le salon de coiffure Gautier Pacé · Livres et goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "sponsor": "Gautier",
     "value": 27.0,
     "category": "beaute",
     "rank": 60
@@ -604,7 +604,7 @@ window.LOTS = [
   {
     "num": 60,
     "order": 60.0,
-    "title": "Boucles d'oreilles coeur offerte par Demi-Sel",
+    "title": "Boucles d'oreilles \"Coeur\" offerte par Demi-Sel",
     "description": "",
     "sponsor": "",
     "value": 26.0,
@@ -625,8 +625,8 @@ window.LOTS = [
     "num": 62,
     "order": 62.0,
     "title": "Enveloppe les \"Saveurs du marché\"",
-    "description": "1 bon d'achat · 1 bon d'achat offert par la Ferme du Verger - valeur 10€ · 1 bon pour 6 Fallafels offert par Hanny Tawfik - valeur 5€",
-    "sponsor": "le primeur GAEC du pont d'Het - valeur 10€",
+    "description": "1 bon d'achat offert par le primeur GAEC du pont d'Het - valeur 10€ · 1 bon d'achat offert par la Ferme du Verger - valeur 10€ · 1 bon pour 6 Fallafels offert par Hanny Tawfik - valeur 5€",
+    "sponsor": "Marché de Pacé",
     "value": 25.0,
     "category": "gastro",
     "rank": 63
@@ -685,8 +685,8 @@ window.LOTS = [
     "num": 68,
     "order": 68.0,
     "title": "Enveloppe les \"Saveurs du marché\"",
-    "description": "1 jus de pommes artisanal · 1 bon d'achat offert par le primeur Auguin Godard - valeur 10€ · 1 bon d'achat offert par la Ferme du Verger - valeur 10€",
-    "sponsor": "Chloé de Gaïa - valeur 3,50€",
+    "description": "1 jus de pommes artisanal offert par Chloé de Gaïa - valeur 3,50€ · 1 bon d'achat offert par le primeur Auguin Godard - valeur 10€ · 1 bon d'achat offert par la Ferme du Verger - valeur 10€",
+    "sponsor": "le marché de Pacé",
     "value": 23.5,
     "category": "gastro",
     "rank": 69
@@ -805,8 +805,8 @@ window.LOTS = [
     "num": 80,
     "order": 80.0,
     "title": "Enveloppe Loisirs et Décoration au Grand Quartier",
-    "description": "1 bon d'achat de 10€ · 1 bon d'achat de 10€ offert par Cadréa",
-    "sponsor": "Loisirs et Couture",
+    "description": "1 bon d'achat de 10€ offert par Loisirs et Couture · 1 bon d'achat de 10€ offert par Cadréa",
+    "sponsor": "Grand quartier",
     "value": 20.0,
     "category": "maison",
     "rank": 81
@@ -955,8 +955,8 @@ window.LOTS = [
     "num": 95,
     "order": 95.0,
     "title": "Pochette FUN FUN FUN",
-    "description": "1 entrée pour Loopiland à Vern Sur Seiche · Plasticfou et goodies",
-    "sponsor": "Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "description": "1 entrée pour Loopiland à Vern Sur Seiche · Plasticfou et goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "sponsor": "Loopiland",
     "value": 17.9,
     "category": "gastro",
     "rank": 96
@@ -966,7 +966,7 @@ window.LOTS = [
     "order": 96.0,
     "title": "Pochette piscine & loisirs en famille",
     "description": "2 entrées de piscine enfants offertes par Aqua Ouest · 1 jeu de carte d'escape game · Goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
-    "sponsor": "Get Out",
+    "sponsor": "Aqua Ouest & Get Out",
     "value": 17.0,
     "category": "beaute",
     "rank": 97
@@ -976,7 +976,7 @@ window.LOTS = [
     "order": 97.0,
     "title": "Pochette piscine & loisirs en famille",
     "description": "2 entrées de piscine enfants offertes par Aqua Ouest · 1 jeu de carte d'escape game · Goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
-    "sponsor": "Get Out",
+    "sponsor": "Aqua Ouest & Get Out",
     "value": 17.0,
     "category": "beaute",
     "rank": 98
@@ -986,7 +986,7 @@ window.LOTS = [
     "order": 98.0,
     "title": "Pochette piscine & loisirs en famille",
     "description": "2 entrées de piscine enfants offertes par Aqua Ouest · 1 jeu de carte d'escape game · Goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
-    "sponsor": "Get Out",
+    "sponsor": "Aqua Ouest & Get Out",
     "value": 17.0,
     "category": "beaute",
     "rank": 99
@@ -1095,8 +1095,8 @@ window.LOTS = [
     "num": 109,
     "order": 109.0,
     "title": "Pochette FUN FUN FUN",
-    "description": "1 entrée pour Loopiland à Vern Sur Seiche · Plasticfou et goodies",
-    "sponsor": "Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "description": "1 entrée pour Loopiland à Vern Sur Seiche · Plasticfou et goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "sponsor": "Loopiland",
     "value": 15.9,
     "category": "gastro",
     "rank": 110
@@ -1115,8 +1115,8 @@ window.LOTS = [
     "num": 111,
     "order": 111.0,
     "title": "Lot déco de chambre enfant & Loisirs",
-    "description": "Affiche offerte par Cadréa · Goodies",
-    "sponsor": "Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "description": "Affiche offerte par Cadréa · Goodies offerts par Leclerc Culturel Saint Grégoire & Super U L'Hermitage",
+    "sponsor": "Cadréa",
     "value": 15.0,
     "category": "maison",
     "rank": 112
