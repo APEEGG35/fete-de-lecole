@@ -115,6 +115,7 @@
           <h3 class="highlight__title">${escape(lot.title)}</h3>
           ${lot.description ? `<p class="highlight__description">${escape(lot.description)}</p>` : ''}
           ${lot.sponsor ? `<p class="highlight__sponsor">Offert par ${escape(cleanSponsor(lot.sponsor))}</p>` : ''}
+          ${winner ? `<div class="highlight__winner">★ Ticket gagnant n°${escape(winner.ticket)}</div>` : ''}
         </article>
       `;
     }).join('');

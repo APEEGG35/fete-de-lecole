@@ -49,22 +49,32 @@ Pour régénérer ce fichier depuis un nouveau CSV, garder à disposition le scr
 
 ## Saisir les numéros gagnants après le tirage
 
-1. Ouvrir `data/winners.js`.
-2. Passer `window.DRAW_DONE = true;`
-3. Remplir le tableau `window.WINNERS` :
+Une fois le tirage fait et les colonnes gagnants du Sheet remplies, on régénère
+`data/winners.js` automatiquement depuis le CSV — **pas de saisie à la main** :
 
-```js
-window.WINNERS = [
-  { num: 1, ticket: "0432", name: "Marie D." },
-  { num: 2, ticket: "1187", name: "Famille Martin" },
-  // …
-];
+```bash
+python3 scripts/csv_to_winners.py
 ```
 
-Le champ `num` correspond au **numéro original** du lot (colonne `num` dans `lots.js`, pas le `rank`).
-Le champ `name` est optionnel.
+Le script lit, dans le même CSV que les lots :
 
-Une fois sauvegardé et committé, la section *« Les numéros gagnants »* affichera la liste, et chaque lot concerné dans le site portera le mention « Ticket gagnant n°XXXX ».
+- **colonne A** — le n° du lot (même logique que `csv_to_lots.py`),
+- **colonne E** — `N° du ticket gagnant`,
+- **colonne F** — `NOM Prénom` du gagnant, **nom de famille en premier** (convention du Sheet).
+
+Il écrit `window.WINNERS` et passe `window.DRAW_DONE = true;`. Chaque entrée :
+
+```js
+{ num: 1, ticket: "771", name: "Rock B." }
+```
+
+- `num` correspond au **numéro original** du lot (colonne `num` dans `lots.js`, pas le `rank`) ; les lots « bis » gardent leur libellé string (`"1 bis"`) pour matcher.
+- `name` est **anonymisé pour l'affichage public** : prénom + initiale du nom de famille (`BAMENDU Rock` → `Rock B.`, `LE DU VICTOR` → `Victor L.`). Les noms de famille composés et les prénoms à trait d'union sont gérés.
+- Les lots sans ticket renseigné (invendu, réservé) sont ignorés.
+
+> ⚠️ Le script normalise la casse (`DESMARES BENJAMIN` → `Benjamin D.`) mais **ne peut pas réinventer les accents manquants** dans la source (`AGNES` → `Agnes`). Pour des accents corrects, les saisir dans le Sheet avant de relancer.
+
+Une fois `data/winners.js` régénéré et committé, la section *« Les numéros gagnants »* affiche la liste, et chaque lot concerné porte la mention « Ticket gagnant n°XXXX ».
 
 ## Remplacer les logos
 
